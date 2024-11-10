@@ -98,3 +98,23 @@ a {
   color: #0FBFBF;
 }
 
+.shining-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00bcd4;
+  position: relative;
+  box-shadow: 0 0 15px 5px rgba(0, 188, 212, 0.5); /* Initial glow */
+
+  /* Adding a pulsing/shining effect */
+  animation: shine 1.5s infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 10px 3px rgba(0, 188, 212, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px 7px rgba(0, 188, 212, 0.8);
+  }
+}

@@ -1,32 +1,42 @@
-import React from 'react'
+import React from 'react';
 
 export const ExperiencePage = () => {
   return (
-    <div id = "Experience" className='text-white text-center mt-20 mb-20 px-4 max-w-screen-lg mx-auto'>
+    <div id="Experience" className="flex flex-col items-center gap-6 mt-20 px-4 text-white">
+      
+      {/* Centered Title */}
+      <h1 className="font-bold text-4xl text-pink-400 mb-6 text-center">Experience</h1>
 
-      {/* Responsive Grid: Switch to 1 column on smaller screens */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-        
-        {/* Title */}
-        <div className="text-4xl md:text-3xl text-pink-400 col-span-full mb-8">Experience</div>
+      {/* Timeline for Experience Entries */}
+      <div className="relative md:w-2/3">
+        {/* Timeline Line (Visible only on medium and larger screens) */}
+        <div className="hidden md:block absolute border-l-2 border-blue-400 h-full left-1/2 transform -translate-x-1/2"></div>
 
-        {/* Experience Entries */}
-        <div className="flex flex-col items-center rounded-xl border-blue-400 border-2 w-full md:w-80 mx-auto p-4">
-          <h2 className='text-4xl md:text-2xl text-blue-400 font-bold my-2'>2022</h2>
-          <h3 className='text-lg md:text-base text-center'>IT SUPPORT ENGINEER | FORTITUDE NICSA GLOBAL</h3>
-        </div>
-        
-        <div className="flex flex-col items-center rounded-xl border-blue-400 border-2 w-full md:w-80 mx-auto p-4">
-          <h2 className='text-4xl md:text-2xl text-blue-400 font-bold my-2'>2021</h2>
-          <h3 className='text-lg md:text-base text-center'>IT SUPPORT | MONASH UNIVERSITY</h3>
-        </div>
-        
-        <div className="flex flex-col items-center rounded-xl border-blue-400 border-2 w-full md:w-80 mx-auto p-4">
-          <h2 className='text-4xl md:text-2xl text-blue-400 font-bold my-2'>2019</h2>
-          <h3 className='text-lg md:text-base text-center'>HELP DESK SUPPORT | MICROSOFT</h3>
+        <div className="flex flex-col gap-12">
+          {[
+            { year: "2022", title: "IT SUPPORT ENGINEER | FORTITUDE NICSA GLOBAL" },
+            { year: "SEP 2021 To APR 2022", title: "IT SUPPORT | MONASH UNIVERSITY" },
+            { year: "AUG 2015 To FEB 2019", title: "HELP DESK SUPPORT | MICROSOFT" },
+          ].map((experience, index) => (
+            <div key={index} className={`relative flex flex-col items-center ${index % 2 === 0 ? 'md:items-start' : 'md:items-end'} gap-4`}>
+              {/* Shining Timeline Dot */}
+              <div className="shining-dot absolute left-1/2 transform -translate-x-1/2"></div>
+
+              {/* Experience Card */}
+              <div className="border-2 rounded-lg border-blue-400 p-6 text-center max-w-xs md:max-w-sm flex flex-col items-center">
+                {/* Icon at the Top */}
+                <img src="./Images/working.png" alt="Experience Icon" className="w-12 h-12 mb-4" />
+
+                <h3 className="text-lg text-blue-400 mt-2">{experience.title}</h3>
+                <h2 className="font-semibold text-2xl text-gray-300">{experience.year}</h2>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+
 

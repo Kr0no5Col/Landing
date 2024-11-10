@@ -6,7 +6,7 @@ export const ContactoPage = () => {
     const date = prompt("Eres un hielito? pon tu fecha de cumple (e.g., YYYY/MM/DD):");
     
   
-    if (date == '12/01/2022') {
+    if (date == '12/01/2002') {
       window.location.href = "https://www.youtube.com/watch?v=o2tdLOK7-PE"; 
   };
   };
