@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
-              className="text-4xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text- "
+              className="text-4xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               href="/"
             >
               ANDRES
@@ -29,24 +29,25 @@ export default function Navbar() {
             }
             id="example-navbar-danger"
           >
-            <ul className="text-3xl flex flex-col lg:flex-row list-none lg:ml-auto Opciones">
-              
-              <Link smooth spy to="about">
-                <span className="ml-2 ">About</span>
-              </Link>
-              <Link smooth spy to="Studies">
-                <span className="ml-2 ">Studies</span>
-              </Link>
-              <Link smooth spy to="Experience">
-                <span className="ml-2 ">Experience</span>
-              </Link>
+            {/* Add a background overlay with opacity */}
+            <div className={`fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm ${navbarOpen ? "block" : "hidden"}`}></div>
 
-              <Link smooth spy to="Projects">
-                <span className="ml-2 ">Projects</span>
+            {/* Menu container with higher z-index and background color */}
+            <ul className="text-3xl flex flex-col lg:flex-row list-none lg:ml-auto Opciones z-50 bg-[#0FBFBF]  lg:bg-transparent p-4 lg:p-0 rounded-md lg:rounded-none">
+              
+              <Link smooth spy to="page1" onClick={() => setNavbarOpen(false)}>
+                <span className="ml-2 text-white lg:text-inherit">About</span>
               </Link>
-              <Link smooth spy to="Contact">
-                <span className="ml-2 ">Contact</span>
+              <Link smooth spy to="page2" onClick={() => setNavbarOpen(false)}>
+                <span className="ml-2 text-white lg:text-inherit">Studies</span>
               </Link>
+              <Link smooth spy to="page3" onClick={() => setNavbarOpen(false)}>
+                <span className="ml-2 text-white lg:text-inherit">Experience</span>
+              </Link>
+              <Link smooth spy to="page4" onClick={() => setNavbarOpen(false)}>
+                <span className="ml-2 text-white lg:text-inherit">Projects</span>
+              </Link>
+              
             </ul>
           </div>
         </div>

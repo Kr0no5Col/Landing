@@ -1,7 +1,7 @@
 import Navbar from "./Components/NavBar";
 import InicioPage from "./pages/InicioPage";
 import { PerfilPage } from "./pages/PerfilPage";
-import { PortafolioPage } from "./pages/ProjectsPage"; 
+import { ProjectsPage } from "./pages/ProjectsPage"; 
 import { ContactoPage } from "./pages/ContactoPage";
 import {StudiesPage} from "./pages/StudiesPage"
 import { ExperiencePage } from "./pages/ExperiencePage";
@@ -26,7 +26,7 @@ function App() {
         <ExperiencePage/>
       </div>
       <div className="backdrop-blur-lg" id="page5">
-        <PortafolioPage />
+        <ProjectsPage />
       </div>
       <div>
         <ContactoPage />

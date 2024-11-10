@@ -1,34 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-
-
-export const PortafolioPage = () => {
+export const ProjectsPage = () => {
   return (
     <>
-    <h1 id = "Projects" className='text-center text-pink-400 text-4xl my-20'>Projects</h1>
-    <div className='flex flex-row gap-10 justify-center'>
-      <div className='w-80 h-80 bg-slate-900 rounded-2xl border-[0.1rem] '>
-        <h1 className=' text-white text-center m-4 text-2xl font-semibold'>To Do list</h1>
-        <img src="/Images/01todo.jpg" alt="imagen" className='w-auto rounded-b-xl' />
-        <a href="https://github.com/Kr0no5Col/To-do-list"><img src="/Images/LogoGithuh.png" alt="" className='m-auto mt-4 hover:w-10' /></a>
+      <div id="Projects" className="flex flex-col items-center gap-6 mt-20 px-4">
+        
+        {/* Centered Title */}
+        <h1 className="font-bold text-4xl text-pink-400 mb-6 text-center">Projects</h1>  
+        
+        {/* Responsive Grid for Project Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+          <div className="bg-blue-900 rounded-xl p-4 flex flex-col items-center text-white w-full">
+            <h2 className="text-xl font-bold">To Do List</h2>
+            <img src="/Images/todo_screenshot.png" alt="To Do List Screenshot" className="w-auto rounded-b-xl" />
+            <i className="fab fa-github text-3xl"></i>
+          </div>
+          <div className="bg-blue-900 rounded-xl p-4 flex flex-col items-center text-white w-full">
+            <h2 className="text-xl font-bold">Landing Page</h2>
+            <img src="/Images/02landing.jpg" alt="Landing Page Screenshot" className="w-auto rounded-b-xl" />
+            <i className="fab fa-github text-3xl"></i>
+          </div>
+          <div className="bg-blue-900 rounded-xl p-4 flex flex-col items-center text-white w-full">
+            <h2 className="text-xl font-bold">Weather Map</h2>
+            <img src="/Images/weather_screenshot.png" alt="Weather Map Screenshot" className="w-auto rounded-b-xl" />
+            <i className="fab fa-github text-3xl"></i>
+          </div>
+        </div>
+        
       </div>
-
-      <div className='w-80 h-80 bg-slate-900 rounded-2xl border-[0.1rem] '>
-        <h1 className=' text-white text-center m-4 text-2xl font-semibold'>Landing Page</h1>
-        <img src="/Images/02landing.jpg" alt="imagen" className='w-auto rounded-b-xl' />
-        <a href="https://github.com/Kr0no5Col/Landing_Page"><img src="/Images/LogoGithuh.png" alt="" className='m-auto mt-4 hover:w-10' /></a>
-      </div>
-
-      <div className='w-80 h-80 bg-slate-900 rounded-2xl border-[0.1rem] '>
-        <h1 className=' text-white text-center m-4 text-2xl font-semibold'>Weather Map</h1>
-        <img src="/Images/03weather.jpg" alt="imagen" className='w-auto rounded-b-xl' />
-        <a href="#"><img src="/Images/LogoGithuh.png" alt="" className='m-auto mt-4 hover:w-10' /></a>
-      </div>
-      
-    </div>
-
     </>
-
-
-  )
-}
+  );
+};

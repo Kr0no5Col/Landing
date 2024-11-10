@@ -7,7 +7,7 @@
 
 
 /* :root {
-  background-color: #ccc;
+  background-color: #ccc;npm 
 } */
 body{
   background-attachment: fixed;
@@ -48,8 +48,6 @@ section {
   min-height: 70px;
   width: 100%;
   color: #0FBFBF;
-
-  /* background-image: url('./Images/Background_Inicio.png') ; */
   background-size: cover;
   background-position: top;
   padding: 0 1rem;
